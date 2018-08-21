@@ -11,11 +11,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapButton(sender: AnyObject) {
-        let kotoba1 = ["クマが","サルが","子供が","ネコが","羊が","イカが","アルパカが","ブタが","ロボットが","宇宙人が"]
+        let kotoba1 = ["ゾウが","サルが","子供が","ネコが","羊が","イカが","アルパカが","ブタが","ロボットが","宇宙人が"]
         let kotoba2 = ["ケーキを","ボールを","消しゴムを","魚を","草を","すみを","石を","トリュフを","ネジを","UFOを"]
         let kotoba3 = ["食べた。","投げた。","拾った。","くわえた。","食べた。","はいた。","けった。","見つけた。","しめた。","なくした。"]
-        let a = Int(arc4random_uniform(10))
-        print(a)
+        let k1 = UInt32(kotoba1.count) //; kotoba1の要素数を取得する→UInt32にキャスト
+        let a = Int(arc4random_uniform(k1)) //;  print(a)
         let b = Int(arc4random_uniform(10))
         let c = Int(arc4random_uniform(10))
         let kotoba = kotoba1[a] + kotoba2[b] + kotoba3[c]
